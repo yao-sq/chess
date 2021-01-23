@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>chess</title>
+    <meta charset="UTF-8">
+    <style>
+        .chess-board { border-spacing: 0; border-collapse: collapse; }
+        .chess-board th { padding: .5em; }
+        .chess-board th + th { border-bottom: 1px solid #000; }
+        .chess-board th:first-child,
+        .chess-board td:last-child { border-right: 1px solid #000; }
+        .chess-board tr:last-child td { border-bottom: 1px solid; }
+        .chess-board th:empty { border: none; }
+        .chess-board td { width: 1.5em; height: 1.5em; text-align: center; font-size: 32px; line-height: 0;}
+        .chess-board .light { background: #eee; }
+        .chess-board .dark { background: #aaa; }
+    </style>
+</head>
+
+
+<body>
+<table class="chess-board">
+    <tbody>
+    <tr>
+        <th></th>
+        <th v-for="letter in ['a','b','c','d','e','f','g','h']">{{letter}}</th>
+    </tr>
+    <tr>
+        <th>8</th>
+        <td id="cell:a8" class="light">♜</td>
+        <td id="cell:b8" class="dark">♞</td>
+        <td id="cell:c8" class="light">♝</td>
+        <td id="cell:d8" class="dark">♛</td>
+        <td id="cell:e8" class="light">♚</td>
+        <td id="cell:f8" class="dark">♝</td>
+        <td id="cell:g8" class="light">♞</td>
+        <td id="cell:h8" class="dark">♜</td>
+    </tr>
+    <tr>
+        <th>7</th>
+        <td id="cell:a7" class="dark">♟</td>
+        <td id="cell:b7" class="light">♟</td>
+        <td id="cell:c7" class="dark">♟</td>
+        <td id="cell:d7" class="light">♟</td>
+        <td id="cell:e7" class="dark">♟</td>
+        <td id="cell:f7" class="light">♟</td>
+        <td id="cell:g7" class="dark">♟</td>
+        <td id="cell:h7" class="light">♟</td>
+    </tr>
+    <tr>
+        <th>6</th>
+        <td id="cell:a6" class="light"></td>
+        <td id="cell:b6" class="dark"></td>
+        <td id="cell:c6" class="light"></td>
+        <td id="cell:d6" class="dark"></td>
+        <td id="cell:e6" class="light"></td>
+        <td id="cell:f6" class="dark"></td>
+        <td id="cell:g6" class="light"></td>
+        <td id="cell:h6" class="dark"></td>
+    </tr>
+    <tr>
+        <th>5</th>
+        <td id="cell:a5" class="dark"></td>
+        <td id="cell:b5" class="light"></td>
+        <td id="cell:c5" class="dark"></td>
+        <td id="cell:d5" class="light"></td>
+        <td id="cell:e5" class="dark"></td>
+        <td id="cell:f5" class="light"></td>
+        <td id="cell:g5" class="dark"></td>
+        <td id="cell:h5" class="light"></td>
+    </tr>
+    <tr>
+        <th>4</th>
+        <td id="cell:a4" class="light"></td>
+        <td id="cell:b4" class="dark"></td>
+        <td id="cell:c4" class="light"></td>
+        <td id="cell:d4" class="dark"></td>
+        <td id="cell:e4" class="light"></td>
+        <td id="cell:f4" class="dark"></td>
+        <td id="cell:g4" class="light"></td>
+        <td id="cell:h4" class="dark"></td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td id="cell:a3" class="dark"></td>
+        <td id="cell:b3" class="light"></td>
+        <td id="cell:c3" class="dark"></td>
+        <td id="cell:d3" class="light"></td>
+        <td id="cell:e3" class="dark"></td>
+        <td id="cell:f3" class="light"></td>
+        <td id="cell:g3" class="dark"></td>
+        <td id="cell:h3" class="light"></td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td id="cell:a2" class="light">♙</td>
+        <td id="cell:b2" class="dark">♙</td>
+        <td id="cell:c2" class="light">♙</td>
+        <td id="cell:d2" class="dark">♙</td>
+        <td id="cell:e2" class="light">♙</td>
+        <td id="cell:f2" class="dark">♙</td>
+        <td id="cell:g2" class="light">♙</td>
+        <td id="cell:h2" class="dark">♙</td>
+    </tr>
+    <tr>
+        <th>1</th>
+        <td id="cell:a1" class="dark">♖</td>
+        <td id="cell:b1" class="light">♘</td>
+        <td id="cell:c1" class="dark">♗</td>
+        <td id="cell:d1" class="light">♕</td>
+        <td id="cell:e1" class="dark">♔</td>
+        <td id="cell:f1" class="light">♗</td>
+        <td id="cell:g1" class="dark">♘</td>
+        <td id="cell:h1" class="light">♖</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
